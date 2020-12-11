@@ -6,10 +6,13 @@ const app = express();
 // mimic __dirname for using it with es modules (it is used so far with commonjs)
 const __dirname = path.resolve();
 
+// console.log(__dirname);
+
 // assign a port
 const port = process.env.PORT || 3000;
 
-const publicPath = path.join(__dirname, '..', 'public');
+const publicPath = path.join(__dirname, '..', 'react-player');
+// console.log(publicPath);
 
 app.use(express.static(publicPath));
 
