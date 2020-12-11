@@ -11,7 +11,9 @@ console.log(__dirname);
 // assign a port
 const port = process.env.PORT || 3000;
 
-const publicPath = path.join(__dirname, '..', 'react-player/build');
+// for local installations use react-player/build
+// for heroku use app/build
+const publicPath = path.join(__dirname, '..', 'app/build');
 console.log(publicPath);
 
 app.use(express.static(publicPath));
